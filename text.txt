@@ -1,1 +1,184 @@
 hi hello cahamk 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+hiii nithya 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+mkdir labexam1
+cd labexam1
+git init 
+echo "hello Nithya"> file.txt
+git add .
+git commit -m "first commit"
+git config --global user.name "nithyagowda2604"   
+git config --global user.email "nithyads2604@gmail.com"
+git remote add (https... url of repo) 
+git remote add origin (https .. url of repo)
+git branch -m main 
+git push -u origin main
+git log 
+git status 
+git reset
+
+
+
+
+
+ git init
+Initialized empty Git repository in C:/Users/Shreya Patil/Desktop/nit/.git/
+
+Shreya Patil@DESKTOP-J8V3SPF MINGW64 ~/Desktop/nit (master)
+$ git clone https://github.com/vvce23ise0048-sys/nit.git
+Cloning into 'nit'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+
+Shreya Patil@DESKTOP-J8V3SPF MINGW64 ~/Desktop/nit (master)
+$ cd "nit"
+
+Shreya Patil@DESKTOP-J8V3SPF MINGW64 ~/Desktop/nit/nit (main)
+$ git add .
+
+Shreya Patil@DESKTOP-J8V3SPF MINGW64 ~/Desktop/nit/nit (main)
+$ git commit -m "first commit"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Shreya Patil@DESKTOP-J8V3SPF MINGW64 ~/Desktop/nit/nit (main)
+$ ls
+is
+
+Shreya Patil@DESKTOP-J8V3SPF MINGW64 ~/Desktop/nit/nit (main)
+$ git checkout -b branch
+Switched to a new branch 'branch'
+
+Shreya Patil@DESKTOP-J8V3SPF MINGW64 ~/Desktop/nit/nit (branch)
+$ echo "this is branch">is
+
+Shreya Patil@DESKTOP-J8V3SPF MINGW64 ~/Desktop/nit/nit (branch)
+$ git add .
+warning: in the working copy of 'is', LF will be replaced by CRLF the next time Git touches it
+
+Shreya Patil@DESKTOP-J8V3SPF MINGW64 ~/Desktop/nit/nit (branch)
+$ git commit -m "commit in branch"
+[branch c91e1d7] commit in branch
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Shreya Patil@DESKTOP-J8V3SPF MINGW64 ~/Desktop/nit/nit (branch)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Shreya Patil@DESKTOP-J8V3SPF MINGW64 ~/Desktop/nit/nit (main)
+$ echo "this is main">is
+
+Shreya Patil@DESKTOP-J8V3SPF MINGW64 ~/Desktop/nit/nit (main)
+$ git add .
+warning: in the working copy of 'is', LF will be replaced by CRLF the next time Git touches it
+
+Shreya Patil@DESKTOP-J8V3SPF MINGW64 ~/Desktop/nit/nit (main)
+$ git commit -m "commit in main"
+[main cfbe9c1] commit in main
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Shreya Patil@DESKTOP-J8V3SPF MINGW64 ~/Desktop/nit/nit (main)
+$ git merge branch
+Auto-merging is
+CONFLICT (content): Merge conflict in is
+Automatic merge failed; fix conflicts and then commit the result.
+
+Shreya Patil@DESKTOP-J8V3SPF MINGW64 ~/Desktop/nit/nit (main|MERGING)
+$ git diff
+diff --cc is
+index accd2f8,cd488fc..0000000
+--- a/is
++++ b/is
+@@@ -1,1 -1,1 +1,5 @@@
+++<<<<<<< HEAD
+ +this is main
+++=======
++ this is branch
+++>>>>>>> branch
+
+Shreya Patil@DESKTOP-J8V3SPF MINGW64 ~/Desktop/nit/nit (main|MERGING)
+$ git reset --merge
+
+Shreya Patil@DESKTOP-J8V3SPF MINGW64 ~/Desktop/nit/nit (main)
+$ git remote rm origin
+
+Shreya Patil@DESKTOP-J8V3SPF MINGW64 ~/Desktop/nit/nit (main)
+$ git remote add origin https://github.com/vvce23ise0048-sys/nit.git
+
+Shreya Patil@DESKTOP-J8V3SPF MINGW64 ~/Desktop/nit/nit (main)
+$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 243 bytes | 243.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/vvce23ise0048-sys/nit.git
+   e500b78..cfbe9c1  main -> main
+
+Shreya Patil@DESKTOP-J8V3SPF MINGW64 ~/Desktop/nit/nit (main)
+$ git push origin branch
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 245 bytes | 245.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'branch' on GitHub by visiting:
+remote:      https://github.com/vvce23ise0048-sys/nit/pull/new/branch
+remote:
+To https://github.com/vvce23ise0048-sys/nit.git
+ * [new branch]      branch -> branch
